@@ -1,4 +1,12 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+<input type="text" (keydown)="genericEvent($event, 'keydown')" (input)="genericEvent($event, 'input')" [(ngModel)]="strValue" />
+</div>
+<div>
+<p>Valeur={{strValue}}</p>
+</div>
+
+<div>
+<ul>
+  <li *ngFor="let item of log">{{item}}</li>
+</ul>
+</div>
